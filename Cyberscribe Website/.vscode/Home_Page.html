@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberScribe FZC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #000;
+  }
+  
+/* Header */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.logo img {
+  height: 80px; /* Increased header logo size (from 60px to 80px) */
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-right: 30px;
+  padding-top: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.btn-outline {
+  border: 1px solid #69be28;
+  background: transparent;
+  color: #69be28;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #69be28;
+  color: #fff;
+}
+  
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px;
+  }
+  
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  .hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .consult-btn {
+    padding: 10px 20px;
+    background: #14181d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .hero-image img {
+    width: 400px;
+  }
+  
+  .clients {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .clients .trust-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .logos img {
+    width: 80px;
+    margin: 0 15px;
+  }
+  
+  .process {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .process h2 {
+    color: #5de347;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .process p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .step {
+    border: 2px solid #14181d;
+    padding: 20px;
+    border-radius: 12px;
+    width: 200px;
+    background: #f9f9f9;
+  }
+  
+  .step span {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5de347;
+  }
+  
+  .step h3 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .working-process {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+  }
+  
+  .working-process h2 {
+    font-size: 2.5rem;
+    color: #1c1c1c;
+    margin-bottom: 10px;
+  }
+  
+  .working-process .subheading {
+    color: #555;
+    margin-bottom: 40px;
+    font-size: 1rem;
+  }
+  
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .process-step {
+    background: #f3f3f3;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 260px;
+    box-shadow: 0 4px 0 #111;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .step-number {
+    background: #5de347;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  
+  .step-title {
+    background: #5de347;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .services-grid {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  .services-grid h2 {
+    font-size: 2.2rem;
+    color: #1c1c1c;
+    margin-bottom: 10px;
+  }
+  
+  .services-grid .subheading {
+    color: #555;
+    margin-bottom: 40px;
+    font-size: 1rem;
+    max-width: 700px;
+    margin-inline: auto;
+  }
+  
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .service-card {
+    border-radius: 16px;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .service-card a {
+    text-decoration: none;
+    font-weight: 500;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .service-card img {
+    width: 100%;
+    max-height: 140px;
+    object-fit: contain;
+  }
+  
+  /* Background color variations */
+  .service-card.light {
+    background: #fff;
+    color: #000;
+  }
+  
+  .service-card.green {
+    background: #5de347;
+    color: #000;
+  }
+  
+  .service-card.dark {
+    background: #1c1c1c;
+    color: #fff;
+  }
+  
+  .service-card.light-green {
+    background: #5de347;
+    color: #000;
+  }
+  
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+  }
+  
+  .container {
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+  }
+  
+  .header {
+      text-align: center;
+      margin-bottom: 30px;
+  }
+  
+  .stats {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+  }
+  
+  .stat-item {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      flex: 1;
+      margin: 0 10px;
+  }
+  
+  .call-to-action {
+      text-align: center;
+      margin-top: 30px;
+  }
+  
+  button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  button:hover {
+      background-color: #0056b3;
+  }
+  
+  /* Testimonials */
+  .testimonials-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .highlight-title {
+    display: inline-block;
+    background-color: #5de347;
+    color: #1c1c1c;
+    padding: 6px 12px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-subheading {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .testimonial-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .testimonial {
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 400px;
+    position: relative;
+  }
+  
+  .testimonial::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top-color: #1c1c1c;
+  }
+  
+  .testimonial .author {
+    display: block;
+    margin-top: 12px;
+    color: #5de347;
+    font-weight: bold;
+  }
+  
+  /* Footer */
+/* === Footer - NEW FOOTER CSS === */
+footer {
+  background: #000; /* Black background */
+  color: #fff;
+  padding: 40px 0;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.footer-container { /* Container for footer content to control its width */
+  max-width: 1200px; /* Adjust this value to match your desired content width */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 30px; /* Padding inside the container for left/right spacing */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px; /* Gap between columns on larger screens */
+}
+
+.footer-bottom-container { /* Container for footer bottom content */
+    max-width: 1200px; /* Match footer-container width */
+    margin: 0 auto;
+    padding: 20px 30px 0; /* Top padding and left/right padding */
+    border-top: 1px solid #333;
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    display: flex; /* Use flex for the bottom section */
+    justify-content: center; /* Center horizontally */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-col { /* General column class for footer-top */
+    flex-basis: 25%; /* Default flex-basis for columns */
+    min-width: 200px; /* Minimum width before wrapping */
+    box-sizing: border-box;
+}
+
+/* Specific column sizing for a more precise match */
+.footer-top .footer-col:nth-child(1) { /* Logo, Links, Social */
+    flex-basis: 25%;
+    max-width: 25%;
+    padding-right: 20px; /* Spacing for the next column */
+}
+.footer-top .footer-col:nth-child(2) { /* Contact details */
+    flex-basis: 35%; /* Wider for contact details as per image */
+    max-width: 35%;
+    padding-right: 20px; /* Spacing for the next column */
+}
+.footer-top .footer-col:nth-child(3) { /* Subscribe */
+    flex-basis: 30%; /* Slightly smaller for subscribe as per image */
+    max-width: 30%;
+    padding-right: 0; /* No right padding for the last column */
+}
+
+/* Adjust for responsiveness - columns should stack */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center items when stacked */
+        gap: 20px; /* Adjust gap for stacked items */
+    }
+    .footer-col {
+        flex-basis: 100%; /* Make columns full width on smaller screens */
+        max-width: 100%;
+        padding-right: 0; /* Remove padding when stacked */
+        text-align: center; /* Center text within stacked columns */
+        margin-bottom: 20px; /* Add space between stacked columns */
+    }
+    .footer-col:last-child {
+        margin-bottom: 0;
+    }
+    .footer-logo-img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-social-icons {
+        justify-content: center; /* Center social icons when stacked */
+    }
+    .footer-subscribe-group {
+        justify-content: center; /* Center subscribe input group */
+        width: fit-content; /* Make input group fit its content for centering */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-contact-heading {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+.footer-logo-img { /* This targets the footer logo */
+  height: 90px; /* Increased footer logo size (from 70px to 90px) */
+  margin-bottom: 20px;
+}
+
+.footer-links-list {
+    margin-bottom: 20px;
+}
+
+.footer-links-list a {
+  display: block;
+  color: #ccc;
+  font-size: 14px;
+  margin: 8px 0;
+  text-decoration: none;
+}
+
+.footer-links-list a:hover {
+  color: #67af4c;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+.footer-social-icons img {
+    width: 40px; /* Increased social icon size (from 32px to 40px) */
+    height: 40px; /* Increased social icon size (from 32px to 40px) */
+}
+
+.footer-contact-heading {
+  background: #67af4c;
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer-contact-details p {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-subscribe-group {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.footer-subscribe-group input[type="email"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background: #fff;
+  color: #333;
+}
+
+.footer-subscribe-group button {
+  background: #67af4c;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.footer-subscribe-group button:hover {
+  background: #4f8d38;
+}
+
+footer .footer-bottom-container a {
+  color: #aaa;
+  margin: 0 5px;
+  text-decoration: underline;
+}
+
+footer .footer-bottom-container a:hover {
+  color: #fff;
+}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="logo.jpg" alt="CyberScribe Logo" /> </div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">About us</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact us</a>
+        <button class="btn-outline">Request a quote</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Navigating the digital landscape for success</h1>
+      <p>Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
+      <a href="#" class="consult-btn">Book a consultation</a>
+    </div>
+    <div class="hero-image">
+      <img src="hero_image.png" alt="Megaphone illustration" />
+    </div>
+  </section>
+
+  <section class="clients">
+    <p class="trust-text">Trusted by the world’s best companies [social proof to build credibility]</p>
+    <div class="logos">
+      <img src="logo1.png" alt="Logo 1" />
+      <img src="logo2.png" alt="Logo 2" />
+      <img src="logo3.png" alt="Logo 3" />
+    </div>
+  </section>
+
+  <section class="working-process">
+  <h2>Our Working Process</h2>
+  <p class="subheading">Step-by-Step Guide to Achieving Your Business Goals</p>
+
+  <div class="process-grid">
+    <div class="process-step">
+      <span class="step-number">01</span>
+      <span class="step-title">Consultation</span>
+    </div>
+    <div class="process-step">
+      <span class="step-number">02</span>
+      <span class="step-title">Research & Strategy</span>
+    </div>
+    <div class="process-step">
+      <span class="step-number">03</span>
+      <span class="step-title">Impletation</span> <!-- typo copied from image -->
+    </div>
+    <div class="process-step">
+      <span class="step-number">04</span>
+      <span class="step-title">Monitoring & Optimization<br>(SEO)</span>
+    </div>
+    <div class="process-step">
+      <span class="step-number">05</span>
+      <span class="step-title">Reporting & Communication</span>
+    </div>
+    <div class="process-step">
+      <span class="step-number">06</span>
+      <span class="step-title">Continual Improvement</span>
+    </div>
+  </div>
+</section>
+
+<section class="services-grid">
+  <h2>Boost your brand with data-driven marketing solutions.</h2>
+  <p class="subheading">
+    At Cyber Scribe, we blend creativity with analytics to craft campaigns that captivate your audience and drive measurable growth.
+  </p>
+  <div class="service-cards">
+    <div class="service-card light">
+      <h3>Search engine optimization</h3>
+      <img src="image.png" alt="SEO icon">
+      <a href="#">Learn more <span>➜</span></a>
+    </div>
+    <div class="service-card green">
+      <h3>Pay-per-click advertising</h3>
+      <img src="image2.png" alt="PPC icon">
+      <a href="#">Learn more <span>➜</span></a>
+    </div>
+    <div class="service-card dark">
+      <h3>Social Media Marketing</h3>
+      <img src="image3.png" alt="Social Media icon">
+      <a href="#">Learn more <span>➜</span></a>
+    </div>
+    <div class="service-card light-green">
+      <h3>Email Marketing</h3>
+      <img src="image4.png" alt="Email icon">
+      <a href="#">Learn more <span>➜</span></a>
+    </div>
+    <div class="service-card green">
+      <h3>Content Creation</h3>
+      <img src="image5.png" alt="Content icon">
+      <a href="#">Learn more <span>➜</span></a>
+    </div>
+    <div class="service-card dark">
+      <h3>Analytics and Tracking</h3>
+      <img src="image6.png" alt="Analytics icon">
+      <a href="#">Learn more <span>➜</span></a>
+    </div>
+  </div>
+</section>
+
+        <div class="header">
+            <h1>Real Results. Real Growth.</h1>
+            <p>From clicks to conversions — our clients saw 10x faster results and 300% higher ROI.</p>
+            <p>Emphasize time-saving and use numbers to maximize credibility.</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <h2>10x</h2>
+                <p>Increase in productivity</p>
+            </div>
+            <div class="stat-item">
+                <h2>300%</h2>
+                <p>Return on investment</p>
+            </div>
+            <div class="stat-item">
+                <h2>5k+</h2>
+                <p>Happy customers</p>
+            </div>
+            <div class="stat-item">
+                <h2>100+</h2>
+                <p>5-star reviews</p>
+            </div>
+        </div>
+        <div class="call-to-action">
+            <h2>Let’s make things happen</h2>
+            <p>Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.</p>
+            <button id="get-started">Get started</button>
+        </div>
+    </div>
+  
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+  <h2 class="highlight-title">Testimonials</h2>
+  <p class="testimonial-subheading">
+    Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services
+  </p>
+  <div class="testimonial-cards">
+    <div class="testimonial">
+      <p>
+        “We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.”
+      </p>
+      <span class="author">John Smith</span>
+    </div>
+    <div class="testimonial">
+      <p>
+        “We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.”
+      </p>
+      <span class="author">John Smith</span>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+ <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <img src="logo.png" alt="CyberScribe Logo" class="footer-logo-img" />
+        <div class="footer-links-list">
+          <a href="#">About us</a>
+          <a href="#">Services</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact us</a>
+        </div>
+        <div class="footer-social-icons">
+          <img src="logoin.png" alt="LinkedIn" />
+          <img src="fin.png" alt="Facebook" />
+          <img src="insta.png" alt="Instagram" />
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-contact-heading">Contact us:</div>
+        <div class="footer-contact-details">
+          <p>Email: cyberscribe@hotmail.com</p>
+          <p>Phone: +971 6 524 2807</p>
+          <p>Address: Sharjah, United Arab Emirates</p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-subscribe-group">
+          <input type="email" placeholder="Email" />
+          <button>Subscribe to news</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-container">
+      <p>&copy; 2025 CyberScribe FZC. All rights reserved. <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a></p>
+    </div>
+  </footer>
+  
+</body>
+</html>

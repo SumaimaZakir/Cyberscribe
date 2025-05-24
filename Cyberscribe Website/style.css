@@ -1,0 +1,418 @@
+/* General Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* Container Utility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+/* Header */
+.header {
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.logo img {
+  height: 80px; /* Increased header logo size (from 60px to 80px) */
+  margin-right: 10px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.btn-outline {
+  border: 1px solid #69be28;
+  background: transparent;
+  color: #69be28;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #69be28;
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+}
+
+.hero h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: #555;
+}
+
+/* Pricing */
+.pricing {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.plan-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 300px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.plan-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.billed {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.plan-card ul {
+  text-align: left;
+  margin: 1rem 0;
+  list-style: none;
+  padding: 0;
+}
+
+.plan-card ul li {
+  margin: 8px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #111;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+/* Trust Logos */
+.trust-logos {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f9f9f9;
+}
+
+.trust-logos .logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.trust-logos img {
+  height: 100px; /* Force consistent height */
+  width: 100px;  /* Force consistent width */
+  object-fit: contain; /* Ensures the image fits within the dimensions without cropping, maintaining aspect ratio. */
+}
+
+/* Features Section */
+.features {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fff;
+}
+
+.features h2 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.feature {
+  width: 300px;
+  text-align: left;
+}
+
+.feature h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.feature a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #000;
+  text-decoration: underline;
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #f9f9f9;
+}
+
+.cta h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* === Footer - NEW FOOTER CSS === */
+footer {
+  background: #000; /* Black background */
+  color: #fff;
+  padding: 40px 0;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.footer-container { /* Container for footer content to control its width */
+  max-width: 1200px; /* Adjust this value to match your desired content width */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 30px; /* Padding inside the container for left/right spacing */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px; /* Gap between columns on larger screens */
+}
+
+.footer-bottom-container { /* Container for footer bottom content */
+    max-width: 1200px; /* Match footer-container width */
+    margin: 0 auto;
+    padding: 20px 30px 0; /* Top padding and left/right padding */
+    border-top: 1px solid #333;
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    display: flex; /* Use flex for the bottom section */
+    justify-content: center; /* Center horizontally */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-col { /* General column class for footer-top */
+    flex-basis: 25%; /* Default flex-basis for columns */
+    min-width: 200px; /* Minimum width before wrapping */
+    box-sizing: border-box;
+}
+
+/* Specific column sizing for a more precise match */
+.footer-top .footer-col:nth-child(1) { /* Logo, Links, Social */
+    flex-basis: 25%;
+    max-width: 25%;
+    padding-right: 20px; /* Spacing for the next column */
+}
+.footer-top .footer-col:nth-child(2) { /* Contact details */
+    flex-basis: 35%; /* Wider for contact details as per image */
+    max-width: 35%;
+    padding-right: 20px; /* Spacing for the next column */
+}
+.footer-top .footer-col:nth-child(3) { /* Subscribe */
+    flex-basis: 30%; /* Slightly smaller for subscribe as per image */
+    max-width: 30%;
+    padding-right: 0; /* No right padding for the last column */
+}
+
+/* Adjust for responsiveness - columns should stack */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center items when stacked */
+        gap: 20px; /* Adjust gap for stacked items */
+    }
+    .footer-col {
+        flex-basis: 100%; /* Make columns full width on smaller screens */
+        max-width: 100%;
+        padding-right: 0; /* Remove padding when stacked */
+        text-align: center; /* Center text within stacked columns */
+        margin-bottom: 20px; /* Add space between stacked columns */
+    }
+    .footer-col:last-child {
+        margin-bottom: 0;
+    }
+    .footer-logo-img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-social-icons {
+        justify-content: center; /* Center social icons when stacked */
+    }
+    .footer-subscribe-group {
+        justify-content: center; /* Center subscribe input group */
+        width: fit-content; /* Make input group fit its content for centering */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-contact-heading {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+.footer-logo-img { /* This targets the footer logo */
+  height: 90px; /* Increased footer logo size (from 70px to 90px) */
+  margin-bottom: 20px;
+}
+
+.footer-links-list {
+    margin-bottom: 20px;
+}
+
+.footer-links-list a {
+  display: block;
+  color: #ccc;
+  font-size: 14px;
+  margin: 8px 0;
+  text-decoration: none;
+}
+
+.footer-links-list a:hover {
+  color: #67af4c;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+.footer-social-icons img {
+    width: 40px; /* Increased social icon size (from 32px to 40px) */
+    height: 40px; /* Increased social icon size (from 32px to 40px) */
+}
+
+.footer-contact-heading {
+  background: #67af4c;
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer-contact-details p {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-subscribe-group {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.footer-subscribe-group input[type="email"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background: #fff;
+  color: #333;
+}
+
+.footer-subscribe-group button {
+  background: #67af4c;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.footer-subscribe-group button:hover {
+  background: #4f8d38;
+}
+
+footer .footer-bottom-container a {
+  color: #aaa;
+  margin: 0 5px;
+  text-decoration: underline;
+}
+
+footer .footer-bottom-container a:hover {
+  color: #fff;
+}

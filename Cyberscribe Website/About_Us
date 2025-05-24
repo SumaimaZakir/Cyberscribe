@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Scribe</title>
+  <link rel="stylesheet" href="styles"/>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="logo.png" alt="CyberScribe Logo" />
+    </div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact us</a>
+    </nav>
+    <button class="quote-btn">Request a quote</button>
+  </header>
+  
+
+  <main>
+    <!-- About Section -->
+    <section class="about">
+      <div class="about-text">
+        <h2>About Cyber Scribe</h2>
+        <p>
+          Cyber Scribe is a digital marketing company that specializes in helping
+          businesses build strong online presence. From SEO strategies and paid
+          advertising to social media and content marketing, we deliver
+          end-to-end solutions to boost engagement, generate leads, and drive
+          sales.
+        </p>
+        <p>
+          Our expert team crafts customized strategies and uses the latest
+          analytics tools to ensure your business achieves sustainable growth.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="about-image.png" alt="About Us Image" />
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+      <h2>Introduce your team</h2>
+      <div class="team-cards">
+        <div class="card">
+          <img src="member1.png" alt="Member" />
+          <h3>Alan Smith</h3>
+          <p>Project Lead</p>
+          <p>We work in a collaborative culture to deliver creative solutions that deliver value.</p>
+        </div>
+        <div class="card">
+          <img src="member2.png" alt="Member" />
+          <h3>Jane Doe</h3>
+          <p>Senior Brand Specialist</p>
+          <p>We power all avenues of your growth, combining digital tools with human creativity.</p>
+        </div>
+        <div class="card">
+          <img src="member3.png" alt="Member" />
+          <h3>Michael Brown</h3>
+          <p>Content Manager</p>
+          <p>We create compelling content with SEO in mind, across multiple media platforms.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location">
+      <h2>Our location</h2>
+      <p>Sharjah<br/>Digital marketing industry<br/>Visit today</p>
+      <img src="location.png" alt="Location Image" />
+    </section>
+  </main>
+
+<footer class="footer">
+  <div class="footer-row">
+    <div class="footer-col logo-col">
+      <div class="footer-logo">Cyber<span>Scribe</span></div>
+      <button class="contact-btn">Contact us</button>
+      <p>Email: cyberscribe@hotmail.com</p>
+      <p>Phone: +971 4 123 4567</p>
+      <p>Address: Sharjah, United Arab Emirates</p>
+    </div>
+    
+    <div class="footer-col link-col">
+      <a href="#">About us</a>
+      <a href="#">Services</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact us</a>
+    </div>
+    
+    <div class="footer-col subscribe-col">
+      <div class="social-icons">
+        <a href="#"><img src="linkedin.svg" alt="LinkedIn" /></a>
+        <a href="#"><img src="facebook.svg" alt="Facebook" /></a>
+        <a href="#"><img src="twitter.svg" alt="Twitter" /></a>
+      </div>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Email" required />
+        <button type="submit">Subscribe to news</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2025 CyberScribe. All Rights Reserved.</p>
+    <a href="#">Privacy Policy</a>
+  </div>
+</footer>
+
+
+</body>
+</html>

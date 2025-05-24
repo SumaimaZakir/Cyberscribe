@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberScribe Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #fff; color: #000; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; border-bottom: 1px solid #ddd; }
+    header img { /* This targets the header logo */
+        height: 60px; /* Increased header logo size */
+    }
+    nav a { margin: 0 10px; text-decoration: none; color: #000; font-size: 14px; }
+    nav a.button { background: #f5f5f5; padding: 5px 15px; border: 1px solid #000; border-radius: 4px; }
+
+    .hero img { width: 100%; max-height: 400px; object-fit: cover; }
+
+    section { padding: 60px 40px; text-align: center; }
+    h2 { font-size: 28px; font-weight: 700; margin-bottom: 10px; }
+    p.subtitle { font-size: 14px; color: #555; margin-bottom: 40px; }
+
+    .gallery, .projects { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .gallery img, .projects img { width: 280px; border-radius: 8px; }
+
+    .project-card { text-align: left; max-width: 280px; }
+    .project-card h4 { margin-top: 10px; font-size: 16px; font-weight: 600; }
+    .project-card p { font-size: 14px; color: #666; margin: 4px 0; }
+    .project-card a { font-size: 13px; color: #000; text-decoration: none; }
+
+    /* === Footer === */
+    footer {
+      background: #000; /* Black background */
+      color: #fff;
+      padding: 40px 0;
+      margin-top: 60px;
+      width: 100%;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    .footer-bottom-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 30px 0;
+        border-top: 1px solid #333;
+        font-size: 12px;
+        color: #aaa;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-col {
+        flex-basis: 25%;
+        min-width: 200px;
+        box-sizing: border-box;
+    }
+
+    .footer-top .footer-col:nth-child(1) {
+        flex-basis: 25%;
+        max-width: 25%;
+        padding-right: 20px;
+    }
+    .footer-top .footer-col:nth-child(2) {
+        flex-basis: 35%;
+        max-width: 35%;
+        padding-right: 20px;
+    }
+    .footer-top .footer-col:nth-child(3) {
+        flex-basis: 30%;
+        max-width: 30%;
+        padding-right: 0;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .footer-col {
+            flex-basis: 100%;
+            max-width: 100%;
+            padding-right: 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .footer-col:last-child {
+            margin-bottom: 0;
+        }
+        .footer-logo-img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-social-icons {
+            justify-content: center;
+        }
+        .footer-subscribe-group {
+            justify-content: center;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-contact-heading {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+
+    .footer-logo-img { /* This targets the footer logo */
+      height: 70px; /* Increased footer logo size */
+      margin-bottom: 20px;
+    }
+
+    .footer-links-list {
+        margin-bottom: 20px;
+    }
+
+    .footer-links-list a {
+      display: block;
+      color: #ccc;
+      font-size: 14px;
+      margin: 8px 0;
+      text-decoration: none;
+    }
+
+    .footer-links-list a:hover {
+      color: #67af4c;
+    }
+
+    .footer-social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    .footer-social-icons img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer-contact-heading {
+      background: #67af4c;
+      color: #000;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .footer-contact-details p {
+        color: #fff;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .footer-subscribe-group {
+      display: flex;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .footer-subscribe-group input[type="email"] {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      background: #fff;
+      color: #333;
+    }
+
+    .footer-subscribe-group button {
+      background: #67af4c;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+
+    .footer-subscribe-group button:hover {
+      background: #4f8d38;
+    }
+
+    footer .footer-bottom-container a {
+      color: #aaa;
+      margin: 0 5px;
+      text-decoration: underline;
+    }
+
+    footer .footer-bottom-container a:hover {
+      color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="CyberScribe Logo">
+    <nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="About_Us.html">About us</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact us</a>
+  <a href="services.html">Services</a>
+  <a href="quote.html"><button class="btn-outline">Request a quote</button></a>
+</nav>
+  </header>
+
+  <div class="hero">
+    <img src="logo23.png" alt="Hero Image">
+  </div>
+
+  <section>
+    <h2>Our Featured Projects</h2>
+    <p class="subtitle">Work that speaks.</p>
+    <div class="gallery">
+      <img src="logo24.png" alt="Project 1">
+      <img src="logo30.png" alt="Project 2">
+      <img src="logo32.png" alt="Project 3">
+      <img src="logo45.png" alt="Project 4">
+      <img src="logo66.png" alt="Project 5">
+      <img src="logo88.png" alt="Project 6">
+    </div>
+  </section>
+
+  <section>
+    <p class="subtitle">Portfolio</p>
+    <h2>More Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="logo01.png" alt="Fashion Project">
+        <h4>Fashion Projects</h4>
+        <p>Fashion designs.</p>
+        <a href="#">View project →</a>
+      </div>
+      <div class="project-card">
+        <img src="logo02.png" alt="Business Project">
+        <h4>Business Projects</h4>
+        <p>Business Designs.</p>
+        <a href="#">View project →</a>
+      </div>
+      <div class="project-card">
+        <img src="logo03.png" alt="Marketing Project">
+        <h4>Marketing Projects</h4>
+        <p>Marketing Design.</p>
+        <a href="#">View project →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <img src="logo.png" alt="CyberScribe Logo" class="footer-logo-img" />
+        <div class="footer-links-list">
+          <a href="#">About us</a>
+          <a href="#">Services</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact us</a>
+        </div>
+        <div class="footer-social-icons">
+          <img src="logoin.png" alt="LinkedIn" />
+          <img src="fin.png" alt="Facebook" />
+          <img src="insta.png" alt="Instagram" />
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-contact-heading">Contact us:</div>
+        <div class="footer-contact-details">
+          <p>Email: cyberscribe@hotmail.com</p>
+          <p>Phone: +971 6 524 2807</p>
+          <p>Address: Sharjah, United Arab Emirates</p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-subscribe-group">
+          <input type="email" placeholder="Email" />
+          <button>Subscribe to news</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-container">
+      <p>&copy; 2025 CyberScribe FZC. All rights reserved. <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a></p>
+    </div>
+  </footer>
+</body>
+</html>
